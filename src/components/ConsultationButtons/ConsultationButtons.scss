@@ -24,6 +24,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
 
     &:hover {
       background-color: #e55a2b;
@@ -79,4 +80,3 @@
     }
   }
 }
-

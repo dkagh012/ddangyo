@@ -3,7 +3,8 @@ import AOS from "aos";
 import "./Benefits.scss";
 import character02 from "../../assets/images/character_02.png";
 import character04 from "../../assets/images/character_04.png";
-
+import doremi_01 from "../../assets/images/doremi_01.png";
+import doremi_02 from "../../assets/images/character_02.png";
 const Benefits = () => {
   useEffect(() => {
     AOS.init({
@@ -72,60 +73,70 @@ const Benefits = () => {
         <h2 className="benefits__title" data-aos="fade-up">
           왜 '땡겨요'가 착한배달앱일까요?
         </h2>
-
-        <div className="benefits__section">
-          <h3 className="benefits__section-title" data-aos="fade-up">
-            가맹점 혜택
-          </h3>
-          <div className="benefits__grid">
-            {merchantBenefits.map((benefit) => (
-              <div
-                key={benefit.id}
-                className="benefits__item"
-                data-aos="fade-up"
-                data-aos-delay={benefit.delay}
-              >
-                <div className="benefits__icon">
-                  <img
-                    className="benefits__icon-img"
-                    alt={benefit.title}
-                    src={benefit.icon}
-                  />
+        <img
+          className="benefits__character2"
+          src={doremi_01}
+          alt="땡겨요 캐릭터"
+        />
+        <div className="benefits__sections-wrapper">
+          <div className="benefits__section">
+            <h3 className="benefits__section-title" data-aos="fade-up">
+              가맹점 혜택
+            </h3>
+            <div className="benefits__list">
+              {merchantBenefits.map((benefit) => (
+                <div
+                  key={benefit.id}
+                  className="benefits__item"
+                  data-aos="fade-up"
+                  data-aos-delay={benefit.delay}
+                >
+                  <div className="benefits__icon">
+                    <img
+                      className="benefits__icon-img"
+                      alt={benefit.title}
+                      src={benefit.icon}
+                    />
+                  </div>
+                  <p className="benefits__text">{benefit.title}</p>
                 </div>
-                <p className="benefits__text">{benefit.title}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          <div className="benefits__section">
+            <h3 className="benefits__section-title" data-aos="fade-up">
+              소비자 혜택
+            </h3>
+            <div className="benefits__list">
+              {consumerBenefits.map((benefit) => (
+                <div
+                  key={benefit.id}
+                  className="benefits__item"
+                  data-aos="fade-up"
+                  data-aos-delay={benefit.delay}
+                >
+                  <div className="benefits__icon">
+                    <img
+                      className="benefits__icon-img"
+                      alt={benefit.title}
+                      src={benefit.icon}
+                    />
+                  </div>
+                  <p className="benefits__text">{benefit.title}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-
-        <div className="benefits__section">
-          <h3 className="benefits__section-title" data-aos="fade-up">
-            소비자 혜택
-          </h3>
-          <div className="benefits__grid">
-            {consumerBenefits.map((benefit) => (
-              <div
-                key={benefit.id}
-                className="benefits__item"
-                data-aos="fade-up"
-                data-aos-delay={benefit.delay}
-              >
-                <div className="benefits__icon">
-                  <img
-                    className="benefits__icon-img"
-                    alt={benefit.title}
-                    src={benefit.icon}
-                  />
-                </div>
-                <p className="benefits__text">{benefit.title}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <img
+          className="benefits__character"
+          src={doremi_02}
+          alt="땡겨요 캐릭터"
+        />
       </div>
     </section>
   );
 };
 
 export default Benefits;
-

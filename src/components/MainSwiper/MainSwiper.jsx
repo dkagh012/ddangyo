@@ -10,7 +10,6 @@ import device02 from "../../assets/images/device_03_con3.png";
 import device03 from "../../assets/images/device_04_con.png";
 import device04 from "../../assets/images/device_05_con1.png";
 import device05 from "../../assets/images/device_06_con1.png";
-import character01 from "../../assets/images/character_01.png";
 
 const MainSwiper = () => {
   return (
@@ -75,26 +74,6 @@ const MainSwiper = () => {
                 </p>
                 <button className="main-swiper__button">신규 입점 상담</button>
               </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="main-swiper__slide">
-            <img className="main-swiper__bg" alt="메인 배너 배경 2" src="" />
-            <div className="main-swiper__content">
-              <img
-                className="main-swiper__logo"
-                alt="땡겨요 로고"
-                src={logo01}
-              />
-
-              <h1 className="main-swiper__title">
-                전국 어디서나 만나는 땡겨요
-              </h1>
-              <p className="main-swiper__subtitle">
-                입점부터 설치까지 전부 무료
-              </p>
-              <button className="main-swiper__button">온라인 입점 신청</button>
             </div>
           </div>
         </SwiperSlide>
