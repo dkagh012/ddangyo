@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "./Benefits.scss";
 import doremi_01 from "../../assets/images/doremi_01.png";
@@ -13,12 +13,48 @@ import icon07 from "../../assets/images/7.png";
 import icon08 from "../../assets/images/8.png";
 
 const Benefits = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
       once: true,
     });
   }, []);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const copyPhoneNumber = (e) => {
+    if (!isMobile) {
+      e.preventDefault();
+      const phoneNumber = "010-7511-7151";
+      navigator.clipboard
+        .writeText(phoneNumber)
+        .then(() => {
+          alert(`전화번호가 복사되었습니다: ${phoneNumber}`);
+        })
+        .catch((err) => {
+          console.error("복사 실패:", err);
+          // 폴백: 텍스트 영역을 만들어서 복사
+          const textArea = document.createElement("textarea");
+          textArea.value = phoneNumber;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand("copy");
+          document.body.removeChild(textArea);
+          alert(`전화번호가 복사되었습니다: ${phoneNumber}`);
+        });
+    }
+  };
 
   const merchantBenefits = [
     {
@@ -78,7 +114,8 @@ const Benefits = () => {
     <section className="benefits">
       <div className="benefits__container">
         <h2 className="benefits__title" data-aos="fade-up">
-          왜 '땡겨요'가 착한배달앱일까요?
+          왜 '땡겨요'가{" "}
+          <span className="benefits__title-highlight">착한배달앱</span>일까요?
         </h2>
         <img
           className="benefits__character2"
@@ -135,6 +172,16 @@ const Benefits = () => {
               ))}
             </div>
           </div>
+        </div>
+        <div className="benefits__cta" data-aos="fade-up" data-aos-delay="100">
+          <a
+            className="benefits__cta-button benefits__cta-button--phone"
+            href={isMobile ? "tel:01075117151" : undefined}
+            onClick={copyPhoneNumber}
+          >
+            <span className="benefits__phone-label">전화 입점 상담</span>{" "}
+            <span className="benefits__phone-number">010-7511-7151</span>
+          </a>
         </div>
         <img
           className="benefits__character"

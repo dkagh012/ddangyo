@@ -191,6 +191,17 @@
     font-weight: bold;
     margin-bottom: 20px;
     line-height: 1.4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__title-highlight {
+    color: #ff6b35;
+  }
+
+  &__title-strong {
+    color: #111;
   }
 
   &__subtitle {
@@ -213,6 +224,37 @@
     &:hover {
       background-color: #e55a2b;
     }
+  }
+
+  &__cta-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 16px;
+    background: rgba(255, 107, 53, 0.08);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    border-radius: 8px;
+  }
+
+  &__phone-label {
+    font-weight: 700;
+    color: #ff6b35;
+    font-size: 20px;
+    padding-top: 2px;
+  }
+
+  &__phone-number {
+    font-size: 20px;
+    font-weight: 800;
+    color: #111;
+    text-decoration: none;
   }
 }
 
@@ -322,6 +364,21 @@
     &__logo {
       width: 150px;
       margin-bottom: 20px;
+    }
+
+    &__cta-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    &__phone {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &__phone-number {
+      font-size: 1.2rem;
     }
   }
 }

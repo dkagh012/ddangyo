@@ -1,16 +1,50 @@
-# React + Vite
+★★★ 1페이지 (ConsultationButtons,MainSwiper)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. 첫페이지에 신규입점상담 버튼 부근에 휴대폰 번호 크게 넣어주세요
+   010-7511-7151 (O)
 
-Currently, two official plugins are available:
+2. 아래 버튼 두개 버튼 (O)
+   신규입점상담(구글폼 연결예정)
+   카카오톡 채팅상담(카톡링크 연결예정)
+   전화문의 ( 자동으로 문자로 넘어가게 해주실수있나요? )
+   {모바일일때}
+   문자문의 ( 자동으로 전화 키패드로 넘어가게 해주실수있나요? )
+   전화문의 문자문의가 안되면 휴대폰번호라도 넣고 버튼이 있어야 됩니다
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. 너도살고 나도사는(주황색) 우리동네 배달앱 (검정) (O)
 
-## React Compiler
+★★★ 2페이지 (Benefits 페이지)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. 왜 땡겨요가 착한배달앱일까요? -> 착한배달앱<만 글씨색깔 다르게 튀게 부탁드립니다 (O)
+2. 가맹점혜택 / 소비자 혜택 가운데 정렬 글자조금만 키워주세요 ㅠㅠ (O)
+3. 그리고 세세한 혜택들 8개 글자 크기좀 더 크게 부탁드립니다 (O)
 
-## Expanding the ESLint configuration
+★★★ 3페이지 (ApplicationProcess 페이지지)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. step 1 임점신청 밑에 휴대폰번호 010-7511-7151 추가 부탁드립니다 글자크기도 조금 키워주시면 좋겠습니다(O)
+
+2. step4 광고시작 밑에 ( 입점 지원금 지급 ) 오타 수정 부탁드립니다 (O)
+
+★★★ 4페이지 (NationwideService 페이지)
+땡겨요를(주황색) 전국에서 만나요!(기존처럼 남색이나 검정 등) 글자 색깔 차이 두고싶어요 (O)
+
+★★★ 5페이지 (Footer 페이지지)
+
+협력사+최은정 +이메일은 줄간격 좁게 부탁드립니다 글자도 조금더 크게 부탁드립니다
+
+땡겨요 공식협력사 (전 지역 가입 가능)
+최은정 팀장
+ddangyo11@gmail.com
+(살짝띄우듯 여유공간 더 두고 아래 휴대폰번호 부탁드립니다 )
+010-7511-7151
+
+---
+
+그리고 제가 보내드린내용중에 중간에 회색으로 된
+필수서류랑
+
+입점부터설치까지 전부무료
+입점 상담 신청 후 담당자가 연락드릴 예정입니다
+가볍게 문의만 남겨주세요
+
+이 부분들+입점상담버튼도 들어갔으면 좋겠습니다

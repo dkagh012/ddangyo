@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -12,6 +13,41 @@ import device04 from "../../assets/images/device_05_con1.png";
 import device05 from "../../assets/images/device_06_con1.png";
 
 const MainSwiper = ({ onOpenModal }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const copyPhoneNumber = (e) => {
+    if (!isMobile) {
+      e.preventDefault();
+      const phoneNumber = "010-7511-7151";
+      navigator.clipboard
+        .writeText(phoneNumber)
+        .then(() => {
+          alert(`전화번호가 복사되었습니다: ${phoneNumber}`);
+        })
+        .catch((err) => {
+          console.error("복사 실패:", err);
+          // 폴백: 텍스트 영역을 만들어서 복사
+          const textArea = document.createElement("textarea");
+          textArea.value = phoneNumber;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand("copy");
+          document.body.removeChild(textArea);
+          alert(`전화번호가 복사되었습니다: ${phoneNumber}`);
+        });
+    }
+  };
   return (
     <section className="main-swiper">
       <div className="main-swiper__header">
@@ -67,14 +103,31 @@ const MainSwiper = ({ onOpenModal }) => {
               </div>
               <div className="main-swiper__content-text">
                 <h1 className="main-swiper__title">
-                  너도 살고 나도 사는 우리동네 배달앱
+                  <span className="main-swiper__title-highlight">
+                    너도살고 나도사는
+                  </span>{" "}
+                  <span className="main-swiper__title-strong">
+                    우리동네 배달앱
+                  </span>
                 </h1>
                 <p className="main-swiper__subtitle">
                   주문 건당 수수료 2%로 시작하는 착한 배달 서비스
                 </p>
-                <button className="main-swiper__button" onClick={onOpenModal}>
-                  신규 입점 상담
-                </button>
+                <div className="main-swiper__cta-row">
+                  <button className="main-swiper__button" onClick={onOpenModal}>
+                    신규 입점 상담
+                  </button>
+                  <a
+                    className="main-swiper__phone"
+                    href={isMobile ? "tel:01075117151" : undefined}
+                    onClick={copyPhoneNumber}
+                  >
+                    <span className="main-swiper__phone-label">상담 전화</span>
+                    <span className="main-swiper__phone-number">
+                      010-7511-7151
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

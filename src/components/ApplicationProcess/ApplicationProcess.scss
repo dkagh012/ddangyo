@@ -8,11 +8,18 @@
   }
 
   &__title {
-    font-size: 2.2rem;
+    font-size: 36px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     color: #333;
+    display: flex;
+    justify-content: center;
+    p {
+      color: #ff6b35;
+      padding-right: 10px;
+      padding-left: 20px;
+    }
   }
 
   &__grid {
@@ -35,7 +42,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
@@ -81,16 +88,65 @@
   }
 
   &__step-title {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     color: #fb521c;
     line-height: 1.4;
   }
+  &__step-content {
+    position: relative;
+  }
 
   &__step-description {
-    font-size: 14px;
-    color: #666;
+    font-size: 18px;
+    color: #444;
     line-height: 1.6;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    bottom: -32px;
+  }
+
+  &__cta {
+    margin-top: 40px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__cta-button {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 33px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff6b35;
+    border: 2px solid #ff6b35;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+      background-color 0.2s ease;
+    background: rgba(255, 107, 53, 0.08);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    border-radius: 8px;
+    color: black;
+    font-size: 24px;
+    gap: 20px;
+    span {
+      color: #ff6b35;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    &:hover {
+      background: rgba(255, 107, 53, 0.12);
+      transform: translateY(-2px);
+    }
   }
 }
 
@@ -150,6 +206,16 @@
 
     &__step-title {
       font-size: 1.1rem;
+    }
+
+    &__cta {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &__cta-button {
+      width: 100%;
+      text-align: center;
     }
   }
 }
