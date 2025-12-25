@@ -24,7 +24,11 @@ const Footer = () => {
             >
               010-7511-7151
             </a>
-            <a className="footer__cta-button" href="#" rel="noreferrer">
+            <a
+              className="footer__cta-button"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScP7IxldVKcO9xbroteeH408SzJeWj34iktqHhFNRG-524nRw/viewform?pli=1"
+              rel="noreferrer"
+            >
               신규 입점 신청
             </a>
           </div>

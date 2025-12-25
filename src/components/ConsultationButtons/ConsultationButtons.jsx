@@ -35,12 +35,13 @@ const ConsultationButtons = () => {
     {
       id: 1,
       text: "신규 입점 신청",
+      href: "https://docs.google.com/forms/d/e/1FAIpQLScP7IxldVKcO9xbroteeH408SzJeWj34iktqHhFNRG-524nRw/viewform?pli=1",
       showMobile: false,
     },
     {
       id: 2,
       text: "카카오톡 채팅 상담",
-      href: "#",
+      href: "https://open.kakao.com/o/s8rl9X7h",
       showMobile: false,
     },
     {

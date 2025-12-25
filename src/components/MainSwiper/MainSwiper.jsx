@@ -58,7 +58,10 @@ const MainSwiper = () => {
             </h1>
           </div>
           <div className="main-swiper__header-right">
-            <a className="main-swiper__header-button" href="#">
+            <a
+              className="main-swiper__header-button"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScP7IxldVKcO9xbroteeH408SzJeWj34iktqHhFNRG-524nRw/viewform?pli=1"
+            >
               신규 입점 신청
             </a>
           </div>
@@ -121,9 +124,13 @@ const MainSwiper = () => {
                   주문 건당 수수료 2%로 시작하는 착한 배달 서비스
                 </p>
                 <div className="main-swiper__cta-row">
-                  <button className="main-swiper__button">
+                  <a
+                    className="main-swiper__button"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScP7IxldVKcO9xbroteeH408SzJeWj34iktqHhFNRG-524nRw/viewform?pli=1"
+                    rel="noreferrer"
+                  >
                     신규 입점 신청
-                  </button>
+                  </a>
                   <a
                     className="main-swiper__phone"
                     href={isMobile ? "tel:01075117151" : undefined}
