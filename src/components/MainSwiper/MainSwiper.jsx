@@ -132,11 +132,27 @@ const MainSwiper = () => {
                     신규 입점 신청
                   </a>
                   <a
+                    className="main-swiper__button kakaoBtn"
+                    href="https://open.kakao.com/o/s8rl9X7h"
+                    rel="noreferrer"
+                  >
+                    카카오톡 채팅 상담
+                  </a>
+                  <a
                     className="main-swiper__phone"
                     href={isMobile ? "tel:01075117151" : undefined}
                     onClick={copyPhoneNumber}
                   >
                     <span className="main-swiper__phone-label">상담 전화</span>
+                    <span className="main-swiper__phone-number">
+                      010-7511-7151
+                    </span>
+                  </a>
+                  <a
+                    className="main-swiper__phone smsBtn"
+                    href={isMobile ? "sms:01075117151" : undefined}
+                  >
+                    <span className="main-swiper__phone-label">문자 문의</span>
                     <span className="main-swiper__phone-number">
                       010-7511-7151
                     </span>

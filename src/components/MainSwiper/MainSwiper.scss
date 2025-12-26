@@ -1,3 +1,9 @@
+.kakaoBtn {
+  display: none;
+}
+.smsBtn {
+  display: none !important;
+}
 .main-swiper {
   width: 100%;
   display: flex;
@@ -389,6 +395,9 @@
       flex-direction: column;
     }
   }
+  .kakaoBtn {
+    display: block;
+  }
 }
 // 모바일 (768px 이하)
 @media (max-width: 768px) {
@@ -416,7 +425,7 @@
     }
 
     &__container {
-      height: 400px;
+      height: calc(100vh - 68px);
       max-width: 100%;
     }
 
@@ -488,5 +497,11 @@
     &__text2 {
       font-size: 16px;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .smsBtn {
+    display: block !important;
   }
 }
