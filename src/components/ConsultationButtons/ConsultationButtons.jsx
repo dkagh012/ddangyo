@@ -57,6 +57,7 @@ const ConsultationButtons = () => {
       id: 4,
       text: "문자 문의 010-7511-7151",
       href: isMobile ? "sms:01075117151" : undefined,
+      onClick: isMobile ? undefined : copyPhoneNumber,
       showMobile: true,
       label: "문자 문의",
       number: "010-7511-7151",
@@ -81,7 +82,7 @@ const ConsultationButtons = () => {
               className={`consultation-buttons__item ${
                 isMobilePhoneButton
                   ? "consultation-buttons__item--mobile-phone"
-                  : button.id === 3 && !isMobile
+                  : (button.id === 3 || button.id === 4) && !isMobile
                   ? "consultation-buttons__item--full-width"
                   : ""
               }`}
@@ -96,6 +97,7 @@ const ConsultationButtons = () => {
                     button.href?.startsWith("http") ? "_blank" : undefined
                   }
                   rel="noreferrer"
+                  onClick={button.onClick}
                 >
                   {isPhoneButton && button.label ? (
                     <>
